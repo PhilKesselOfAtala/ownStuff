@@ -21,24 +21,23 @@ const Statistics = ({good, neutral, bad}) => {
     }
 
     return ( 
-        <div>
-            <p>all {sum}</p>
-            <p>average {average}</p>
-            <p>positive {postiveValues}%</p>
-        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>all</td>
+                    <td>{sum}</td>
+                </tr>
+                <tr>
+                    <td>average</td>
+                    <td>{average}</td>
+                </tr>
+                <tr>
+                    <td>positive</td>
+                    <td>{postiveValues}%</td>
+                </tr>
+            </tbody>    
+        </table>
     )
-/*
-    return (
-        <div>
-            <p>good {good}</p>
-            <p>neutral {neutral}</p>
-            <p>bad {bad}</p>
-            <p>all {sum}</p>
-            <p>average {ave}</p>
-            <p>positive {postiveValues}%</p>
-        </div>
-    )
-    */
 }
 
 const App = () => {
@@ -94,6 +93,4 @@ const App = () => {
     )
 }
 
-
 ReactDOM.render(<App />, document.getElementById('root'));
-
